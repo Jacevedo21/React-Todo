@@ -1,26 +1,27 @@
 import React from 'react';
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
+import './components/Todo.css'
 
 const todo = [
   {
     task: 'Feed Bare',
-    id: 5,
+    id: 1,
     completed: false
   },
   {
     task: 'Feed ichiraku',
-    id: 5,
+    id: 2,
     completed: false
   },
   {
     task: 'Sell Pinto',
-    id: 5,
+    id: 3,
     completed: false
   },
   {
     task: 'Hack the Mainframe',
-    id: 5,
+    id: 4,
     completed: false
   },
   {
@@ -67,14 +68,31 @@ class App extends React.Component {
     })
   }
 
+  clearTask = () => {
+    const clearedArr = [];
 
+    this.setState({
+      todo: clearedArr
+    })
+  }
+
+  // updateList = () => {
+
+  //   if(todo.task === 'clicked'){
+  //     return todo.task.strike()
+  //   }
+
+  // }
   render() {
     return (
       <div className="App">
         <div className="header">
           {/* <h2>To do list that needs to be completed ASAP!</h2> */}
           <h1 onClick={() => this.setState({})}>To Do List:</h1>
-          <TodoForm addTask={this.addTask} />
+          <TodoForm addTask={this.addTask} 
+          clearTask={this.clearTask}
+          updateList={this.updateList}
+          />
         </div>
         <TodoList
           toggleTask={this.toggleTask}

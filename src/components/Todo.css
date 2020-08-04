@@ -1,0 +1,10 @@
+.task {
+    background-color: lightcoral;
+    width: 13%;
+    border-radius: 50%;
+    text-align: center;
+}
+.task.completed {
+    background-color: lightblue;
+    text-decoration: line-through;
+}

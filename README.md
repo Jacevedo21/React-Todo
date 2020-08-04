@@ -39,7 +39,7 @@ We're going to practice building a stateful class component with this project. E
 - `npm start` will start a development server on your `http://localhost:3000`.
   - If npm asks you to select different port with some error message, just confirm and it will pull it up on port 3001. This simply means you have a development server up and running on that port already.
 
-### Task 2a: MVP
+### Task 2a: MVP 
 
 - **Don't focus on styling yet**. We want you to worry about function over form today.
 - Your todo list should display a list of todos, an input field, a submit button, and a clear all button.
